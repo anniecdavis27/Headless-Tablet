@@ -5,6 +5,27 @@
 
   ul {
     padding-inline-start: 0px;
+
+    a {
+        text-decoration: none;
+        color: $grey-1;
+
+        &:hover {
+            color: $highlight-red;
+        }
+    }
+
+    .active {
+        color: $black;
+        cursor: default;
+        pointer-events: none;
+        li {
+            &::after {
+                content: ' ' url(https://cdn1.tablethotels.com/media/ecs/global/md/react/account-nav-arrow-spaced.png);
+            }
+        }
+    }
+
     li {
       font-size: 16px;
       margin-bottom: 8px;

@@ -1,19 +1,35 @@
-@import '../../scss/variables.scss';
+@import "../../scss/variables.scss";
 
 //stylesheet for About Tablet page
 
 .AboutTablet {
   font-family: $AN-regular;
-  width: 960px;
+  max-width: 960px;
   margin: auto;
   display: flex;
   flex-direction: row;
   margin-top: 70px;
 
   .MainContent {
-      width: 70%;
+    width: 70%;
+    a {
+      color: inherit;
+    }
+  }
+}
+
+@media only screen and (max-width: 830px) {
+  .AboutTablet {
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+
+    .MainContent {
+      width: 100%;
+      margin: 30px auto 0;
       a {
-          color: inherit;
+        color: inherit;
       }
+    }
   }
 }

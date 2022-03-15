@@ -4,4 +4,13 @@
 
 .AboutTablet {
   font-family: $AN-regular;
+  width: 960px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  margin-top: 70px;
+
+  .MainContent {
+      width: 75%;
+  }
 }

@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import parse from 'html-react-parser'
 import Sidebar from "../Sidebar/Sidebar";
-import "./abouttablet.scss"
-import "../../scss/style.scss"
+import MainContent from "../MainContent";
+import "./abouttablet.scss";
+import "../../scss/style.scss";
 
 function AboutTablet() {
   //hooks
@@ -28,12 +28,10 @@ function AboutTablet() {
 
   return (
     <div className="AboutTablet">
-        <Sidebar />
-      <h1>{data ? data.title.rendered : "loading"}</h1>
-      {data ? parse(data.content.rendered) : "loading"}
+      <Sidebar />
+      {data ? <MainContent data={data} /> : "loading"}
     </div>
   );
 }
 
 export default AboutTablet;
-

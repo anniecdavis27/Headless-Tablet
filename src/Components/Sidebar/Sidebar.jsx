@@ -1,6 +1,8 @@
 import { NavLink } from "react-router-dom";
 import "./sidebar.scss";
 
+//This sidebar is a nav menu used in the "About Us", "Join Our Team", and "Affiliate Program" pages
+
 function Sidebar() {
   return (
     <div className="Sidebar">

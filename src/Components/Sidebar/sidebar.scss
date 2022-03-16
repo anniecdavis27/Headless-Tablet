@@ -1,3 +1,5 @@
+//Stylesheet for Sidebar
+
 @import "../../scss/variables.scss";
 
 .Sidebar {
@@ -34,6 +36,8 @@
     }
   }
 }
+
+//Media Query for mobile
 
 @media only screen and (max-width: 830px) {
     .Sidebar {

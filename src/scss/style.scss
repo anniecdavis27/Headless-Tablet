@@ -1,6 +1,6 @@
 @import './variables.scss';
 
-//Global properties
+//Global SCSS properties
 
 h1 {
     font-family: $AN-regular;
@@ -22,3 +22,7 @@ p {
     color: $grey-3;
     margin: 0 0 20px;
 }
+
+.demi-bold-text {
+	font-family: 'AvenirNext-DemiBold', sans-serif;
+  }

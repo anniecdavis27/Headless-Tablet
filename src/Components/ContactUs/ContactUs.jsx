@@ -9,6 +9,7 @@ import "./contactus.scss";
 function ContactUs() {
   //hooks
   const [data, setData] = useState();
+  const [accordionData, setAccordionData] = useState();
 
   // function to pull page data
   useEffect(() => {
@@ -18,6 +19,7 @@ function ContactUs() {
       try {
         const response = await axios(dataUrl);
         setData(response.data);
+        setAccordionData(response.data.acf.accordion_panels);
       } catch (err) {
         console.error(err);
       }
@@ -25,13 +27,33 @@ function ContactUs() {
     makeApiCall();
   }, []);
 
-  console.log(data);
+  let staffImages = [
+    "https://d1sacvjbhsczdb.cloudfront.net/media/ecs/global/assets/cs/ill-1.jpg",
+    "https://d1sacvjbhsczdb.cloudfront.net/media/ecs/global/assets/cs/ill-2.jpg",
+    "https://d1sacvjbhsczdb.cloudfront.net/media/ecs/global/assets/cs/ill-2.jpg",
+    "https://d1sacvjbhsczdb.cloudfront.net/media/ecs/global/assets/cs/ill-6.jpg",
+    "https://d1sacvjbhsczdb.cloudfront.net/media/ecs/global/assets/cs/ill-5.jpg",
+    "https://d1sacvjbhsczdb.cloudfront.net/media/ecs/global/assets/cs/ill-4.jpg",
+    "https://d1sacvjbhsczdb.cloudfront.net/media/ecs/global/assets/cs/ill-7b.jpg",
+    "https://d1sacvjbhsczdb.cloudfront.net/media/ecs/global/assets/cs/ill-12.jpg",
+    "https://d1sacvjbhsczdb.cloudfront.net/media/ecs/global/assets/cs/ill-9.jpg",
+    "https://d1sacvjbhsczdb.cloudfront.net/media/ecs/global/assets/cs/ill-10.jpg",
+    "https://d1sacvjbhsczdb.cloudfront.net/media/ecs/global/assets/cs/ill-8b.jpg",
+    "https://d1sacvjbhsczdb.cloudfront.net/media/ecs/global/assets/cs/ill-11b.jpg",
+  ];
 
   return (
     <div className="ContactUs">
       {data ? <MainContent data={data} /> : "loading"}
-      <AboutImageModule />
-      <TripleContactMod />
+      <div className='contact-flex'>
+        <AboutImageModule images={staffImages} />
+        <TripleContactMod />
+      </div>
+      {accordionData ? (
+        <Accordion accordionData={accordionData} title="Popular Questions" />
+      ) : (
+        "loading"
+      )}
     </div>
   );
 }

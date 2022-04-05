@@ -30,7 +30,7 @@ function ContactUs() {
   let staffImages = [
     "https://d1sacvjbhsczdb.cloudfront.net/media/ecs/global/assets/cs/ill-1.jpg",
     "https://d1sacvjbhsczdb.cloudfront.net/media/ecs/global/assets/cs/ill-2.jpg",
-    "https://d1sacvjbhsczdb.cloudfront.net/media/ecs/global/assets/cs/ill-2.jpg",
+    "https://d1sacvjbhsczdb.cloudfront.net/media/ecs/global/assets/cs/ill-3.jpg",
     "https://d1sacvjbhsczdb.cloudfront.net/media/ecs/global/assets/cs/ill-6.jpg",
     "https://d1sacvjbhsczdb.cloudfront.net/media/ecs/global/assets/cs/ill-5.jpg",
     "https://d1sacvjbhsczdb.cloudfront.net/media/ecs/global/assets/cs/ill-4.jpg",

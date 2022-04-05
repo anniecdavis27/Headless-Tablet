@@ -55,3 +55,53 @@
         }
     }
 }
+
+//mobile styles
+
+@media only screen and (max-width: 830px) {
+    .Accordion {
+        .AccordionPanel {
+            margin: 0 20px;
+            .accordion__panel-title {
+                font-size: 1.2rem;
+                padding: 30px 0;
+                background: none;
+            }
+    
+            .active {
+                background: none;
+            }
+    
+            .accordion__panel-content{
+                width: 100%;
+                font-size: 1rem;
+                max-height: 0;
+                overflow: hidden;
+                transition: 0.6s ease-in-out;
+                line-height: 1.6rem;
+                
+                p {
+                    font-size: 1rem;
+                    line-height: 1.6rem;
+                    margin-bottom: 10px;
+                }
+    
+                .italic-list {
+                    margin-left: 1.5em;
+                }
+                
+                ul {
+                    li {
+                        margin-bottom: 12px;
+                    }
+                }
+            }
+    
+            .active-content {
+                max-height: 1000px;
+                transition: 0.6s ease-in-out;
+            }
+        }
+    }
+  }
+  

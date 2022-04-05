@@ -51,7 +51,8 @@
 
       a {
         color: inherit;
-        font-family: AvenirNext-Medium, HelveticaNeue-Regular, Helvetica Neue, Gill Sans MT, Arial, sans-serif;
+        font-family: AvenirNext-Medium, HelveticaNeue-Regular, Helvetica Neue,
+          Gill Sans MT, Arial, sans-serif;
 
         text-decoration: none;
       }
@@ -76,7 +77,7 @@
           display: flex;
           flex-direction: column;
           justify-content: center;
-          
+
           img {
             width: 50px;
           }
@@ -96,7 +97,7 @@
 
         p {
           color: $grey-1;
-          font-size: .75rem;
+          font-size: 0.75rem;
         }
       }
     }
@@ -117,9 +118,47 @@
     width: 90%;
     margin: auto;
 
+    h1 {
+      font-size: 1.8rem;
+      line-height: 2.2rem;
+    }
+
     .MainContent {
       width: 100%;
       margin: 30px auto 0;
     }
+
+    .contact-flex {
+      display: flex;
+      flex-direction: column;
+
+      .AboutImageModule {
+        width: 100%;
+        margin-right: 0;
+
+        .image-slot {
+          width: 50%;
+          text-align: center;
+        }
+
+        .img-hidden {
+          display: none;
+        }
+      }
+
+      .TripleContactMod {
+        width: 100%;
+
+        #email-mod {
+          padding-top: 40px;
+          border-top: solid 1px $grey-4;
+        }
+      }
+    }
+
+  .module-header {
+    padding: 60px 0 20px;
+    margin-bottom: 0;
+  }
   }
 }
